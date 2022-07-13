@@ -7,13 +7,13 @@ public class Ex1Main2 {
 	public static void main(String[] args) {
 		System.out.println("프로그램 시작");
 		Scanner sc = new Scanner(System.in);
-		Student [] students = new Student[3];
+		Student1 [] students = new Student1[3];
 		
 		for(int i=0;i<students.length;i++) {
-			Student st = new Student();
-			students[i] = st;
 			System.out.println("이름 입력");
 			students[i].name = sc.next();  //st.name = sc.next();
+			Student1 st = new Student1();
+			students[i] = st;
 		}
 		
 		for(int i =0; i<students.length; i++) {

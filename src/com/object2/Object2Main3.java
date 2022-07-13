@@ -25,7 +25,7 @@ public class Object2Main3 {
 		
 		Member member = new Member();
 		member.name="가나다";
-		member.age=100;
+		member.age=30;
 		member.email="asdf@naver.com";
 		member.Phone = "01012345678";
 		m3.info2(member);

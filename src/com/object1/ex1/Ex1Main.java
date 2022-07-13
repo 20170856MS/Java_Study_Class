@@ -7,7 +7,7 @@ public class Ex1Main {
 	public static void main(String[] args) {
 		System.out.println("프로그램 시작");
 		
-		Student std1 = new Student();
+		Student1 std1 = new Student1();
 		std1.name = "가나다";
 		std1.number = 1;
 		std1.kor = 90;
@@ -16,7 +16,7 @@ public class Ex1Main {
 		std1.total= std1.kor+std1.eng+std1.math;
 		std1.avg = std1.total/3;
 		
-		Student std2 = new Student();
+		Student1 std2 = new Student1();
 		std2.name = "라마바";
 		std2.number = 2;
 		std2.kor = 75;
@@ -26,14 +26,14 @@ public class Ex1Main {
 		std2.avg = std1.total/3;
 		
 		
-		Student std = null;
+		Student1 std = null;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("학생 수 입력");
 		int num = sc.nextInt();
 		
-		Student [] students = new Student[num];
+		Student1 [] students = new Student1[num];
 		for(int i =0; i<num; i++) {
-			std = new Student();
+			std = new Student1();
 			System.out.println("이름입력");
 			std.name = sc.next();
 			students[i]=std;

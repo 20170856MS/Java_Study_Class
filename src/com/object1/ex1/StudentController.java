@@ -13,6 +13,11 @@ public class StudentController {
 	//System.out.println("5. 학생 정보 추가");
 	//System.out.println("6. 프로 그램 종료");
 	Scanner sc = new Scanner(System.in);
+	StudentService ss = new StudentService();
+	StudentView sv = new StudentView();
+	Student [] students = null;
+	
+	
 	public void start() {
 		boolean check = true;
 		
@@ -21,10 +26,21 @@ public class StudentController {
 			int select = sc.nextInt();
 			if(select == 1) {
 				System.out.println("1. 학생 정보 입력");
+				students = ss.makeStudents();
 			}else if(select == 2) {
 				System.out.println("2. 학생 정보 조회");
+				sv.view(students);
 			}else if(select == 3) {
 				System.out.println("3. 학생 정보 검색");
+				Student student = ss.findStudent(students);
+				
+				if(students != null) {
+					sv.view(student);
+				}else if(students == null) {
+					sv.view("찾는 번호는 없습니다.");
+				}
+				
+				
 			}else if(select == 4) {
 				System.out.println("4. 학생 정보 삭제");
 			}else if(select == 5) {
