@@ -12,10 +12,19 @@ public class StudentController {
 	//System.out.println("4. 학생 정보 삭제");
 	//System.out.println("5. 학생 정보 추가");
 	//System.out.println("6. 프로 그램 종료");
-	Scanner sc = new Scanner(System.in);
-	StudentService ss = new StudentService();
-	StudentView sv = new StudentView();
-	Student [] students = null;
+	Scanner sc;
+	StudentView sv;
+	StudentService ss;
+	Student [] students;
+	public StudentController() {
+		sc = new Scanner(System.in);
+		sv = new StudentView();
+		ss = new StudentService();
+	}
+	//sc = new Scanner(System.in);
+	//StudentService ss = new StudentService();
+	//StudentView sv = new StudentView();
+	//Student [] students = null;
 	
 	
 	public void start() {
@@ -43,8 +52,10 @@ public class StudentController {
 				
 			}else if(select == 4) {
 				System.out.println("4. 학생 정보 삭제");
+				
 			}else if(select == 5) {
 				System.out.println("5. 학생 정보 추가");
+				ss.addStudent(students);
 			}else if(select == 6) {
 				System.out.println("6. 프로 그램 종료");
 				check = false; 

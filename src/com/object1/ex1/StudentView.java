@@ -17,13 +17,14 @@ public class StudentView {
 		
 		System.out.println("이름\t번호\t국어점수\t영어점수\t수학점수\t총합\t평균");
 		for(int i=0;i<students.length;i++) {
-			System.out.print(students[i].name+"\t");
-			System.out.print(students[i].number+"\t");
-			System.out.print(students[i].kor+"\t");
-			System.out.print(students[i].eng+"\t");
-			System.out.print(students[i].math+"\t");
-			System.out.print(students[i].total+"\t");
-			System.out.print(students[i].avg+"\t");
+			System.out.print(students[i].getName()+"\t");
+			System.out.print(students[i].getNumber()+"\t");
+			System.out.print(students[i].getKor()+"\t");
+			System.out.print(students[i].getEng()+"\t");
+			System.out.print(students[i].getMath()+"\t");
+			System.out.print(students[i].getTotal()+"\t");
+			System.out.print(students[i].getAvg()+"\t");
+			System.out.println("");
 			
 		}
 	}
@@ -35,13 +36,13 @@ public class StudentView {
 	
 	public void view(Student students) {
 		System.out.println("이름\t번호\t국어점수\t영어점수\t수학점수\t총합\t평균");
-		System.out.print(students.name+"\t");
-		System.out.print(students.number+"\t");
-		System.out.print(students.kor+"\t");
-		System.out.print(students.eng+"\t");
-		System.out.print(students.math+"\t");
-		System.out.print(students.total+"\t");
-		System.out.print(students.avg+"\t");
+		System.out.print(students.getName()+"\t");
+		System.out.print(students.getNumber()+"\t");
+		System.out.print(students.getKor()+"\t");
+		System.out.print(students.getEng()+"\t");
+		System.out.print(students.getMath()+"\t");
+		System.out.print(students.getTotal()+"\t");
+		System.out.print(students.getAvg()+"\t");
 	}
 	
 }
